@@ -36,12 +36,12 @@ export const router = createBrowserRouter([
             {
                 path: "college",
                 element: <College></College>,
-                loader: () => fetch('http://localhost:5000/college')
+                loader: () => fetch('https://brightstorm-server-site.vercel.app/college')
             },
             {
                 path: "collegeDetail/:id",
                 element: <PrivetRoute><CollegeDetail></CollegeDetail></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/college/${params.id}`)
+                loader: ({ params }) => fetch(`https://brightstorm-server-site.vercel.app/college/${params.id}`)
             },
             {
                 path: "HomeCollege",
@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
             {
                 path: "profile",
                 element: <Profile></Profile>,
-                loader: ({ params }) => fetch(`http://localhost:5000/apply/${params.email}`)
+                loader: ({ params }) => fetch(`https://brightstorm-server-site.vercel.app/apply/${params.email}`)
             },
         ]
     },

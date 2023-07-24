@@ -7,7 +7,7 @@ const HomeCollege = () => {
     const [details, setDetails] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/college')
+        fetch('https://brightstorm-server-site.vercel.app/college')
             .then(res => res.json())
             .then(data => { setDetails(data) })
     }, [])
